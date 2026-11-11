@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">LocalDev AI</title>
+  <defs>
+    <linearGradient id="ink" gradientUnits="userSpaceOnUse" x1="-80" y1="-80" x2="80" y2="80">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#e8e1ff"/>
+    </linearGradient>
+    <filter id="lift" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3.5" flood-color="#3d2fb5" flood-opacity=".35"/>
+    </filter>
+    <circle id="loop" cx="0" cy="-50" r="34"/>
+    <mask id="m0" maskUnits="userSpaceOnUse" x="-130" y="-130" width="260" height="260">
+      <rect x="-130" y="-130" width="260" height="260" fill="#fff"/>
+      <clipPath id="ci0"><circle cx="10.13" cy="-17.54" r="15"/></clipPath>
+      <clipPath id="co0"><circle cx="-33.17" cy="-57.46" r="15"/></clipPath>
+      <g fill="none" stroke="#000" stroke-width="17">
+        <g clip-path="url(#ci0)"><use href="#loop" transform="rotate(60)"/></g>
+        <g clip-path="url(#co0)"><use href="#loop" transform="rotate(300)"/></g>
+      </g>
+    </mask>
+    <mask id="m1" maskUnits="userSpaceOnUse" x="-130" y="-130" width="260" height="260">
+      <rect x="-130" y="-130" width="260" height="260" fill="#fff"/>
+      <clipPath id="ci1"><circle cx="20.26" cy="0" r="15"/></clipPath>
+      <clipPath id="co1"><circle cx="33.17" cy="-57.46" r="15"/></clipPath>
+      <g fill="none" stroke="#000" stroke-width="17">
+        <g clip-path="url(#ci1)"><use href="#loop" transform="rotate(120)"/></g>
+        <g clip-path="url(#co1)"><use href="#loop"/></g>
+      </g>
+    </mask>
+    <mask id="m2" maskUnits="userSpaceOnUse" x="-130" y="-130" width="260" height="260">
+      <rect x="-130" y="-130" width="260" height="260" fill="#fff"/>
+      <clipPath id="ci2"><circle cx="10.13" cy="17.54" r="15"/></clipPath>
+      <clipPath id="co2"><circle cx="66.34" cy="0" r="15"/></clipPath>
+      <g fill="none" stroke="#000" stroke-width="17">
+        <g clip-path="url(#ci2)"><use href="#loop" transform="rotate(180)"/></g>
+        <g clip-path="url(#co2)"><use href="#loop" transform="rotate(60)"/></g>
+      </g>
+    </mask>
+    <mask id="m3" maskUnits="userSpaceOnUse" x="-130" y="-130" width="260" height="260">
+      <rect x="-130" y="-130" width="260" height="260" fill="#fff"/>
+      <clipPath id="ci3"><circle cx="-10.13" cy="17.54" r="15"/></clipPath>
+      <clipPath id="co3"><circle cx="33.17" cy="57.46" r="15"/></clipPath>
+      <g fill="none" stroke="#000" stroke-width="17">
+        <g clip-path="url(#ci3)"><use href="#loop" transform="rotate(240)"/></g>
+        <g clip-path="url(#co3)"><use href="#loop" transform="rotate(120)"/></g>
+      </g>
+    </mask>
+    <mask id="m4" maskUnits="userSpaceOnUse" x="-130" y="-130" width="260" height="260">
+      <rect x="-130" y="-130" width="260" height="260" fill="#fff"/>
+      <clipPath id="ci4"><circle cx="-20.26" cy="0" r="15"/></clipPath>
+      <clipPath id="co4"><circle cx="-33.17" cy="57.46" r="15"/></clipPath>
+      <g fill="none" stroke="#000" stroke-width="17">
+        <g clip-path="url(#ci4)"><use href="#loop" transform="rotate(300)"/></g>
+        <g clip-path="url(#co4)"><use href="#loop" transform="rotate(180)"/></g>
+      </g>
+    </mask>
+    <mask id="m5" maskUnits="userSpaceOnUse" x="-130" y="-130" width="260" height="260">
+      <rect x="-130" y="-130" width="260" height="260" fill="#fff"/>
+      <clipPath id="ci5"><circle cx="-10.13" cy="-17.54" r="15"/></clipPath>
+      <clipPath id="co5"><circle cx="-66.34" cy="0" r="15"/></clipPath>
+      <g fill="none" stroke="#000" stroke-width="17">
+        <g clip-path="url(#ci5)"><use href="#loop"/></g>
+        <g clip-path="url(#co5)"><use href="#loop" transform="rotate(240)"/></g>
+      </g>
+    </mask>
+  </defs>
+  <g transform="translate(128 128)" fill="none" stroke="url(#ink)" stroke-width="10" stroke-linejoin="round" filter="url(#lift)">
+    <g mask="url(#m0)"><use href="#loop"/></g>
+    <g mask="url(#m1)"><use href="#loop" transform="rotate(60)"/></g>
+    <g mask="url(#m2)"><use href="#loop" transform="rotate(120)"/></g>
+    <g mask="url(#m3)"><use href="#loop" transform="rotate(180)"/></g>
+    <g mask="url(#m4)"><use href="#loop" transform="rotate(240)"/></g>
+    <g mask="url(#m5)"><use href="#loop" transform="rotate(300)"/></g>
+  </g>
+</svg>
