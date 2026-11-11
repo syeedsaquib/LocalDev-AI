@@ -1,6 +1,6 @@
 # LocalDev AI
 
-![LocalDev AI logo](assets/localdev-ai-mark.svg)
+
 
 **A local-first AI coding assistant for chatting with a locally installed language model and exploring a selected codebase.** The app provides a browser UI, a FastAPI backend, persistent SQLite chat history, optional project indexing, and live CPU/GPU/disk/RAM telemetry. It does not send prompts to a hosted LLM.
 
