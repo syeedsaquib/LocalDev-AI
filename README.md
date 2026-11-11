@@ -135,17 +135,49 @@ The PDF upload API stores uploaded files locally under `local_data/uploads/`; up
 - **Disk:** system physical-disk active time from the Windows `% Disk Time` counter. App-drive used/free capacity is additional detail, not the graph percentage.
 - Sampling runs in a separate localhost process on port `8766`; the browser polls it independently from model generation. Hardware counters may be unavailable on non-Windows systems or Windows installations without the relevant counters; unavailable readings are reported rather than inferred.
 
-## Data, privacy, and cleanup
 
-- Chat database: `local_data/database/app.sqlite`
-- Conversation exports: `local_data/exports/`
-- Project metadata and other generated app data: `local_data/`
-- Uploaded files: `local_data/uploads/`
-- Downloaded model weights: keep them outside the repository, such as the sibling `../models/` folder above.
+## Data, Privacy, and Security
 
-These local data folders, model files, vector stores, and environment files are excluded by `.gitignore`. Deleting a chat through the app removes its conversation and messages from SQLite and deletes its export file. The database is created automatically on startup.
+LocalDev AI is designed to operate entirely on the local machine. All chat interactions are processed using the configured local language model without relying on hosted LLM services.
 
-The assistant generates answers locally, but third-party model files and runtime packages remain subject to their own licenses and privacy policies. This project does not bundle them.
+### Data Storage
+
+- **Chat database:** `local_data/database/app.sqlite`
+- **Conversation exports:** `local_data/exports/`
+- **Uploaded files:** `local_data/uploads/`
+- **Project metadata and generated application data:** `local_data/`
+- **Downloaded model weights:** Stored separately, preferably in a sibling `../models/` directory.
+- **Environment configuration:** Stored in `.env`, which is excluded from Git.
+
+### Privacy
+
+- Chat prompts and generated responses are processed by the configured local model.
+- Conversations and messages are stored in a local SQLite database.
+- Conversation exports and uploaded files remain on the local filesystem.
+- Project indexing reads source files from user-selected local directories.
+- Model weights are downloaded separately and are not distributed with this application.
+- No hosted LLM fallback is used when local inference fails.
+- The application does not automatically upload chat history, source code, or prompts to a hosted LLM provider.
+
+### Security Considerations
+
+LocalDev AI is intended for single-machine use and does not provide authentication by default.
+
+- Keep the FastAPI application bound to `127.0.0.1`.
+- Keep the resource-monitor service restricted to localhost.
+- Do not expose application endpoints to external networks without implementing appropriate authentication, access controls, and security protections.
+- Review project directories before indexing their contents.
+- Avoid storing sensitive credentials, API keys, or secrets in indexed project files.
+- Local storage is not automatically encrypted. Protect your operating-system account and local application data accordingly.
+
+### Data Cleanup
+
+- Deleting a conversation through the application removes its database records and associated export file.
+- Uploaded files remain stored locally until explicitly removed.
+- Project metadata remains in the local database until removed through the appropriate application functionality or database cleanup.
+- Deleting the application does not necessarily remove its local data directories or downloaded model weights.
+
+The application database is created automatically on startup. Local application data, model files, exports, uploads, and environment configuration are excluded from Git through `.gitignore`.
 
 ## API overview
 
